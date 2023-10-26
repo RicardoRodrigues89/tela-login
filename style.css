@@ -1,8 +1,19 @@
-.container {
+body {
     background-image: url(imagens/06a3599eed449a94484a6747bc03d9e5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 90vh;
 }
+
+.tela-login {
+    width: 60%;
+    height: 40vh;
+    margin:  auto;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+}
+    
