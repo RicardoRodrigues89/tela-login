@@ -5,15 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <h1>RPG QG</h1>
-      <div class="tela-login"></div>
-      <div id="Login"></div>
-      <form class="card"></form>
-      <div class="card-header"> 
-           <h2> Login</h2>
-      </div>
-      <div class="class-content"></div>
+    <div class="tela-login">
+        <div class="vertical-line"></div>
+        <form>
+            <h2 class="login-heading">FAÇA LOGIN</h2>
+            <div class="form-container">
+                <div class="login">
+                    <input type="text" name="username" id="username" placeholder="USUÁRIO">
+                </div>
+                <div class="login">
+                    <input type="password" name="password" id="password" placeholder="SENHA">
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Lembrar de mim
+                    </label>
+                    <a href="./src/pages/forgot-password.html">Esqueceu a senha?</a>
+                </div>
+                <button onClick="alert('Enviou!')" type="submit" class="btn">Entrar</button>
+                <div class="register-link">
+                    <div class="new-member">
+                        <h2 class="bem-vindo">BEM VINDO</h2>
+                        <h2>Novo Login</h2>
+                        <a href="./src/pages/register.html">Criar conta</a>
+                    </div>
+                </div>
+            </form>
+            <div class="social-icons">
+                <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/saga_leonne/" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
 </body>
 </html>
