@@ -1,60 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
 body {
     background-image: url(imagens/Login.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0;
+    background-size: cover;
+    background-position: center;
 }
 
-h1 {
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.area {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.area-small {
+    height: 60vh;
+    margin: auto;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);  
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.9);    
+    border-top-left-radius: 30px; 
+    border-bottom-left-radius: 30px;
+}
+
+.new-member {
+    position: relative;
+    padding: 20px;
     text-align: center;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
-    color: black; 
-    font-size: 50px;
 }
 
-.tela-login {
-    width: 70%;
+#toggleForm {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.form-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    z-index: 2;
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+}
+
+.toggle-checkbox:checked ~ .overlay {
+    display: block;
+}
+
+.toggle-checkbox:checked ~ .form-content {
+    display: block;
+}
+
+
+.area-large {
     height:60vh;
     margin:  auto;
     background: transparent;
     backdrop-filter: blur(3px);
     border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
 }
 
 .login-heading {
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
     color: black;
-    font-size: 40px; 
-    text-align: right; 
-    margin-right: 20px; 
+    font-size: 35px; 
+    text-align: center;  
+    margin-bottom: 20px;
 }
 
-.form-container {
-    text-align: right; 
-}
-
-.login,
-.remember-forgot {
-    text-align: right; 
-} 
-
-    
 .tela-login form {
     font-size: 20px;
     text-align: center;
-    margin-right: 100px
 }
+
+
 
 .tela-login .login input[type="text"],
 .tela-login .login input[type="password"] {
-    width: 40%;
+    width: 80%;
     height:6vh;
     margin-bottom: 20px;
     border-radius: 30px; 
@@ -63,46 +120,17 @@ h1 {
     text-align: center;
 }
 
-.new-member {
-    font-size: 20px;
-    text-align: center;
-    margin-right: 500px;
-    margin-top: -30%;
-    position: absolute;
-}
-
-.vertical-line {
-position: absolute; 
-    width: 1px; 
-    height: 100%; 
-    background-color: #000; 
-    left: 300px; 
-    backdrop-filter: blur(3px);
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
-    background: transparent;
-}
-
 .btn {
     width: 150px; 
-    height: 4vh;
+    height: 6vh;
     margin-top: 10px;
     border-radius: 10px;
-    margin-right: 70px;
+    text-align: center;
     border: 2px solid rgba(209, 208, 208, 0.2);
     background-color: #2000ad;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
     color: white;
 }
-
-.bem-vindo {
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
-    color: black;
-    font-size: 30px;  
-    margin-right: 5px;
-}
-
 
 
 .icon {
@@ -114,6 +142,6 @@ position: absolute;
 }
 
 .icon i {
-    margin-right: 30px;
-    margin-top: 70px;
+text-align: center;
+margin-top: 50px;
 }
