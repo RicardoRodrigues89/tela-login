@@ -12,8 +12,12 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
+.new-member, .tela-login {
+    font-family: "Century Gothic", Arial, sans-serif;
+}
 
 .container {
     display: flex;
@@ -45,46 +49,22 @@ body {
     text-align: center;
 }
 
-#toggleForm {
-    display: none;
+.new-member h2 {
+    font-size: 30px; 
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 20px;
 }
 
-.overlay {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1;
-    cursor: pointer;
+.new-member h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.form-content {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border: 1px solid #141414;
-    background: #fff;
-    z-index: 2;
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-}
-
-.toggle-checkbox:checked ~ .overlay {
-    display: block;
-}
-
-.toggle-checkbox:checked ~ .form-content {
-    display: block;
-}
 .blue-text {
     color: blue;
     border-bottom: 1px solid blue;
 }
+
 .area-large {
     height:60vh;
     margin:  auto;
@@ -109,8 +89,6 @@ body {
     text-align: center;
 }
 
-
-
 .tela-login .login input[type="text"],
 .tela-login .login input[type="password"] {
     width: 80%;
@@ -122,7 +100,25 @@ body {
     text-align: center;
 }
 
+.login {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.login input[type="text"],
+.login input[type="password"] {
+    padding-left: 10px; 
+    margin-left: 35px
+}
+
+.login i {
+    position: absolute;
+    height:6vh;
+    left: 80px; 
+    color: #333; 
+    z-index: 1; 
+}
 
 .btn {
     width: 150px; 
@@ -136,7 +132,6 @@ body {
     color: white;
 }
 
-
 .icon {
     font-size: 40px; 
     margin-right: 10px; 
@@ -148,4 +143,57 @@ body {
 .icon i {
 text-align: center;
 margin-top: 50px;
+}
+
+
+a {
+    color: blue; 
+    transition: color 0.3s ease; 
+  }
+  
+  a:hover {
+    color: #ccff00; 
+  }
+  
+
+  button {
+    background-color: #ccc; 
+    color: #000; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #ccff00; 
+    color: #fff; 
+  }
+  
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .area {
+        width: 100%; 
+        margin-bottom: 20px;
+        border-radius: 0; 
+    }
+
+    .area-small,
+    .area-large {
+        border-radius: 0; 
+    }
+
+    .new-member,
+    .tela-login {
+        padding: 10px; 
+    }
+
+    .area-small {
+        height: auto; 
+    }
+
+    .area-large {
+        height: auto; 
+    }
 }
