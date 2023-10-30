@@ -152,7 +152,7 @@ a {
   }
   
   a:hover {
-    color: #ccff00; 
+    color: purple; 
   }
   
 
@@ -163,7 +163,7 @@ a {
   }
   
   button:hover {
-    background-color: #ccff00; 
+    background-color: purple; 
     color: #fff; 
   }
   
