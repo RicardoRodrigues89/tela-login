@@ -68,7 +68,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #141414;
     background: #fff;
     z-index: 2;
     width: 200px; /* Ajuste o tamanho conforme necessário */
@@ -81,8 +81,10 @@ body {
 .toggle-checkbox:checked ~ .form-content {
     display: block;
 }
-
-
+.blue-text {
+    color: blue;
+    border-bottom: 1px solid blue;
+}
 .area-large {
     height:60vh;
     margin:  auto;
@@ -120,6 +122,8 @@ body {
     text-align: center;
 }
 
+
+
 .btn {
     width: 150px; 
     height: 6vh;
@@ -136,7 +140,7 @@ body {
 .icon {
     font-size: 40px; 
     margin-right: 10px; 
-    color: #ffffff; 
+    color: #080808; 
     text-decoration: none;
     align-items: center;
 }
