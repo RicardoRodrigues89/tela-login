@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }   
 
 body {
-    background-image: url(imagens/Login.png);
+    background-image: url(./imagens/Login.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: "Century Gothic", Arial, sans-serif;
+    
 }
 
 .new-member, .tela-login {
@@ -38,7 +40,7 @@ body {
     backdrop-filter: blur(3px);
     border: 2px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.5);  
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.9);    
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);    
     border-top-left-radius: 30px; 
     border-bottom-left-radius: 30px;
 }
@@ -63,6 +65,7 @@ body {
 .blue-text {
     color: blue;
     border-bottom: 1px solid blue;
+    cursor: pointer;
 }
 
 .area-large {
@@ -73,7 +76,7 @@ body {
     border: 2px solid rgba(255, 255, 255, .2);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 1);
 }
 
 .login-heading {
@@ -81,7 +84,7 @@ body {
     color: black;
     font-size: 35px; 
     text-align: center;  
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .tela-login form {
@@ -98,6 +101,7 @@ body {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);;
     border: 2px solid rgba(0, 0, 0, 0.2);
     text-align: center;
+    cursor: pointer;
 }
 
 .login {
@@ -109,16 +113,18 @@ body {
 .login input[type="text"],
 .login input[type="password"] {
     padding-left: 10px; 
-    margin-left: 35px
+    margin-left: 35px;
+    text-align: center;
 }
 
 .login i {
     position: absolute;
-    height:6vh;
     left: 80px; 
     color: #333; 
     z-index: 1; 
+    top: 20px;
 }
+
 
 .btn {
     width: 150px; 
@@ -128,8 +134,9 @@ body {
     text-align: center;
     border: 2px solid rgba(209, 208, 208, 0.2);
     background-color: #2000ad;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 20px 10px #0000ff6b;
     color: white;
+    cursor: pointer;
 }
 
 .icon {
@@ -195,5 +202,39 @@ a {
 
     .area-large {
         height: auto; 
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        flex-direction: row;
+        
+        
+    }
+    .area {
+        margin-bottom: 20px;
+        border-radius: 8px; 
+    }
+    .area-small,
+    .area-large {
+        border-radius: 8px; 
+    }
+
+    .new-member,
+    .tela-login {
+        padding: 30px; 
+    }
+
+    .area-small {
+        height: 50vh; 
+        margin:  auto;
+    }
+
+    .area-large {
+        height: 50vh; 
+        margin:  auto;
+      
+        align-items: center;
+        
     }
 }
