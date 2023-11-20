@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }   
 
 body {
@@ -13,11 +12,6 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    font-family: "Century Gothic", Arial, sans-serif;
-    
-}
-
-.new-member, .tela-login {
     font-family: "Century Gothic", Arial, sans-serif;
 }
 
@@ -31,6 +25,7 @@ body {
 .area {
     padding: 20px;
     border: 1px solid #ccc;
+    border-radius: 8px; /* Adicionado para consolidar estilo */
 }
 
 .area-small {
@@ -62,15 +57,9 @@ body {
     margin-bottom: 20px;
 }
 
-.blue-text {
-    color: blue;
-    border-bottom: 1px solid blue;
-    cursor: pointer;
-}
-
 .area-large {
-    height:60vh;
-    margin:  auto;
+    height: 60vh;
+    margin: auto;
     background: transparent;
     backdrop-filter: blur(3px);
     border: 2px solid rgba(255, 255, 255, .2);
@@ -92,13 +81,13 @@ body {
     text-align: center;
 }
 
-.tela-login .login input[type="text"],
-.tela-login .login input[type="password"] {
+.login input[type="text"],
+.login input[type="password"] {
     width: 80%;
-    height:6vh;
+    height: 6vh;
     margin-bottom: 20px;
     border-radius: 30px; 
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.9);
     border: 2px solid rgba(0, 0, 0, 0.2);
     text-align: center;
     cursor: pointer;
@@ -125,7 +114,6 @@ body {
     top: 10px;
 }
 
-
 .btn {
     width: 150px; 
     height: 6vh;
@@ -148,32 +136,29 @@ body {
 }
 
 .icon i {
-text-align: center;
-margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
 }
-
 
 a {
     color: blue; 
     transition: color 0.3s ease; 
-  }
-  
-  a:hover {
-    color: purple; 
-  }
-  
+}
 
-  button {
+a:hover {
+    color: purple; 
+}
+
+button {
     background-color: #ccc; 
     color: #000; 
     transition: background-color 0.3s ease, color 0.3s ease; 
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: purple; 
     color: #fff; 
-  }
-  
+}
 
 @media (max-width: 768px) {
     .container {
@@ -181,60 +166,25 @@ a {
     }
 
     .area {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 20px;
-        border-radius: 0; 
     }
 
     .area-small,
     .area-large {
-        border-radius: 0; 
+        border-radius: 0;
     }
 
     .new-member,
     .tela-login {
-        padding: 10px; 
+        padding: 10px;
     }
 
     .area-small {
-        height: auto; 
+        height: auto;
     }
 
     .area-large {
-        height: auto; 
-    }
-}
-
-@media (min-width: 1920px) {
-    .container {
-        flex-direction: row;
-        
-        
-    }
-    .area {
-        margin-bottom: 20px;
-        border-radius: 8px; 
-    }
-    .area-small,
-    .area-large {
-        border-radius: 8px; 
-    }
-
-    .new-member,
-    .tela-login {
-        padding: 30px; 
-    }
-
-    .area-small {
-        height: 50vh; 
-        margin:  auto;
-    }
-
-    .area-large {
-        height: 50vh; 
-        margin:  auto;
-      
-        align-items: center;
-        
+        height: auto;
     }
 }

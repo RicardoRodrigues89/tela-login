@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="area area-small">
+        <section class="area area-small">
             <div class="new-member">
                 <h2>BEM VINDO</h2>
                 <h3>Novo Login</h3>
-                <a href="./src/pages/register.html">Criar Conta</a>
+                <a href="#" class="criar-conta">Criar Conta</a>
+                <div class="cadastro-email" style="display: none;">
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail">
+                    <br>
+                    <button onclick="enviarEmail()">Enviar</button>
+                </div>
                 <div class="links">
-                    <a href="https://www.google.com/intl/pt-BR/gmail/about/" class="icon"><i class="fab fa-envelope-open"></i></a>
+                    <a href="mailto:seuemail@dominio.com" class="icon"><i class="fas fa-envelope-open"></i></a>
                     <a href="https://web.telegram.org/k/" class="icon"><i class="fab fa-telegram"></i></a>
                     <a href="https://web.whatsapp.com/" class="icon"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="area area-large">
+        </section>
+        <section class="area area-large">
             <div class="tela-login">
                 <div class="vertical-line"></div>
                 <form>
@@ -53,6 +59,23 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     </div>
+    <script>
+        function enviarEmail() {
+            var emailInput = document.getElementById('email').value;
+            alert('Um link de confirmação foi enviado para o seu e-mail: ' + emailInput + '. Por favor, verifique sua caixa de entrada para continuar.');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var criarContaLink = document.querySelector('.criar-conta');
+            var cadastroEmail = document.querySelector('.cadastro-email');
+
+            criarContaLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                cadastroEmail.style.display = cadastroEmail.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
 </body>
+</html>
